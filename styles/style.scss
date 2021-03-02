@@ -1,0 +1,150 @@
+// vars
+$primaryColor: #fb9c0c;
+$primaryIconColor: #ffebcd;
+$secendaryColor: #f2f3f7;
+$secendaryIconColor: #d3d3d3;
+$secendaryTextColor: #b5b5b5;
+
+// mixins
+@mixin box() {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/*************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body {
+  background: #e8eaee;
+}
+
+main {
+  margin: 2rem 3rem;
+  .main-row {
+    display: flex;
+    justify-content: space-between;
+    section {
+      flex: 1;
+      @include box();
+    }
+    .account {
+      margin-right: 2rem;
+      flex: 4;
+      div {
+        flex: 1;
+      }
+      .wrapper {
+        display: flex;
+        .right,
+        .left {
+          & > p {
+            color: $secendaryTextColor;
+            font-weight: 600;
+            margin: 1rem 0;
+          }
+          & > h3 {
+            color: $secendaryTextColor;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+          }
+          span {
+            color: $primaryColor;
+            font-size: 1.2rem;
+          }
+          .btn-wappers {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2.5rem;
+            button {
+              &:first-child {
+                background-color: $primaryColor;
+                color: white;
+                &:hover {
+                  color: black;
+                }
+              }
+              font-weight: 600;
+              cursor: pointer;
+              padding: 1rem;
+              border-radius: 10px;
+              border: none;
+              display: block;
+              transition: background-color ease 0.5s 0s;
+              &:hover {
+                background-color: $secendaryIconColor;
+              }
+            }
+          }
+        }
+        .right {
+          & > p {
+            color: green;
+            text-align: right;
+          }
+          h2 {
+            text-align: right;
+            font-size: 2.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+        .left {
+        }
+      }
+    }
+    .marketing {
+      & > p {
+        color: $secendaryTextColor;
+        font-weight: 600;
+        margin: 1rem 0;
+      }
+      h1 {
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        margin: 1rem 0;
+        span {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .services-row {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    .services-list {
+      @include box();
+      flex: 1;
+      margin-right: 2rem;
+      .service {
+        display: flex;
+        justify-items: center;
+        span {
+          padding: 1rem;
+          font-size: 3rem;
+        }
+        section {
+          display: flex;
+          justify-items: center;
+          flex-direction: column;
+          p {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+    .services-details {
+      @include box();
+      flex: 3;
+    }
+  }
+}

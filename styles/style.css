@@ -1,0 +1,207 @@
+/*************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #e8eaee;
+}
+
+main {
+  margin: 2rem 3rem;
+}
+
+main .main-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-row section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+main .main-row .account {
+  margin-right: 2rem;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+main .main-row .account div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .main-row .account .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-row .account .wrapper .right > p,
+main .main-row .account .wrapper .left > p {
+  color: #b5b5b5;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+main .main-row .account .wrapper .right > h3,
+main .main-row .account .wrapper .left > h3 {
+  color: #b5b5b5;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+main .main-row .account .wrapper .right span,
+main .main-row .account .wrapper .left span {
+  color: #fb9c0c;
+  font-size: 1.2rem;
+}
+
+main .main-row .account .wrapper .right .btn-wappers,
+main .main-row .account .wrapper .left .btn-wappers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+main .main-row .account .wrapper .right .btn-wappers button,
+main .main-row .account .wrapper .left .btn-wappers button {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  -webkit-transition: background-color ease 0.5s 0s;
+  transition: background-color ease 0.5s 0s;
+}
+
+main .main-row .account .wrapper .right .btn-wappers button:first-child,
+main .main-row .account .wrapper .left .btn-wappers button:first-child {
+  background-color: #fb9c0c;
+  color: white;
+}
+
+main .main-row .account .wrapper .right .btn-wappers button:first-child:hover,
+main .main-row .account .wrapper .left .btn-wappers button:first-child:hover {
+  color: black;
+}
+
+main .main-row .account .wrapper .right .btn-wappers button:hover,
+main .main-row .account .wrapper .left .btn-wappers button:hover {
+  background-color: #d3d3d3;
+}
+
+main .main-row .account .wrapper .right > p {
+  color: green;
+  text-align: right;
+}
+
+main .main-row .account .wrapper .right h2 {
+  text-align: right;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .main-row .marketing > p {
+  color: #b5b5b5;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+main .main-row .marketing h1 {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .main-row .marketing h2 {
+  margin: 1rem 0;
+}
+
+main .main-row .marketing h2 span {
+  padding-right: 0.5rem;
+}
+
+main .services-row {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .services-row .services-list {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+}
+
+main .services-row .services-list .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+}
+
+main .services-row .services-list .service span {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+main .services-row .services-list .service section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .services-row .services-list .service section p {
+  background-color: #ddd;
+}
+
+main .services-row .services-details {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+/*# sourceMappingURL=style.css.map */

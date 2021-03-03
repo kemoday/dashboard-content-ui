@@ -1,207 +1,159 @@
-/*************/
+/**************/
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background: #e8eaee;
+.wrapper {
+  margin: 2rem;
 }
 
-main {
-  margin: 2rem 3rem;
+.wrapper .cart-label, .wrapper .main-row main .main-account .acount-number {
+  color: gray;
+  font-weight: 800;
+  font-size: 14px;
 }
 
-main .main-row {
+.wrapper .main-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-main .main-row section {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.wrapper .main-row main {
+  background-color: reds;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 3rem;
+  border-radius: 1rem;
   padding: 1rem;
   background-color: white;
-  border-radius: 10px;
-  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
-
-main .main-row .account {
-  margin-right: 2rem;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
 }
 
-main .main-row .account div {
+.wrapper .main-row main .main-account {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-main .main-row .account .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .main-row .account .wrapper .right > p,
-main .main-row .account .wrapper .left > p {
-  color: #b5b5b5;
-  font-weight: 600;
+.wrapper .main-row main .main-account h2 {
   margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
-main .main-row .account .wrapper .right > h3,
-main .main-row .account .wrapper .left > h3 {
-  color: #b5b5b5;
-  font-weight: 600;
+.wrapper .main-row main .main-account .acount-number {
   font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-main .main-row .account .wrapper .right span,
-main .main-row .account .wrapper .left span {
-  color: #fb9c0c;
-  font-size: 1.2rem;
-}
-
-main .main-row .account .wrapper .right .btn-wappers,
-main .main-row .account .wrapper .left .btn-wappers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 2.5rem;
-}
-
-main .main-row .account .wrapper .right .btn-wappers button,
-main .main-row .account .wrapper .left .btn-wappers button {
-  font-weight: 600;
-  cursor: pointer;
-  padding: 1rem;
-  border-radius: 10px;
-  border: none;
   display: block;
-  -webkit-transition: background-color ease 0.5s 0s;
-  transition: background-color ease 0.5s 0s;
+  margin: 5rem 0s;
 }
 
-main .main-row .account .wrapper .right .btn-wappers button:first-child,
-main .main-row .account .wrapper .left .btn-wappers button:first-child {
-  background-color: #fb9c0c;
+.wrapper .main-row main .main-account .acount-number span {
+  padding: 0 0.5rem;
+  color: #fb9c0c;
+  font-size: 1.3rem;
+}
+
+.wrapper .main-row main .main-account .btn-wapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .main-row main .main-account .btn-wapper button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 1rem;
+  font-weight: 800;
+  background-color: #f2f3f7;
+  margin: 2rem 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.wrapper .main-row main .main-account .btn-wapper button:hover {
+  background-color: gray;
   color: white;
 }
 
-main .main-row .account .wrapper .right .btn-wappers button:first-child:hover,
-main .main-row .account .wrapper .left .btn-wappers button:first-child:hover {
-  color: black;
+.wrapper .main-row main .main-account .btn-wapper .btn-primary {
+  background-color: #fb9c0c;
+  margin-right: 1rem;
+  color: white;
 }
 
-main .main-row .account .wrapper .right .btn-wappers button:hover,
-main .main-row .account .wrapper .left .btn-wappers button:hover {
-  background-color: #d3d3d3;
-}
-
-main .main-row .account .wrapper .right > p {
-  color: green;
+.wrapper .main-row main .available-funds {
   text-align: right;
 }
 
-main .main-row .account .wrapper .right h2 {
-  text-align: right;
-  font-size: 2.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-main .main-row .marketing > p {
-  color: #b5b5b5;
-  font-weight: 600;
-  margin: 1rem 0;
-}
-
-main .main-row .marketing h1 {
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-main .main-row .marketing h2 {
-  margin: 1rem 0;
-}
-
-main .main-row .marketing h2 span {
-  padding-right: 0.5rem;
-}
-
-main .services-row {
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .services-row .services-list {
-  padding: 1rem;
-  background-color: white;
-  border-radius: 10px;
-  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 2rem;
-}
-
-main .services-row .services-list .service {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-}
-
-main .services-row .services-list .service span {
-  padding: 1rem;
+.wrapper .main-row main .available-funds h2 {
   font-size: 3rem;
 }
 
-main .services-row .services-list .service section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-main .services-row .services-list .service section p {
-  background-color: #ddd;
-}
-
-main .services-row .services-details {
+.wrapper .main-row .marketing {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 1rem;
   padding: 1rem;
   background-color: white;
-  border-radius: 10px;
-  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.wrapper .main-row .marketing h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper .main-row .marketing h3 {
+  margin: 1rem 0;
+}
+
+.wrapper .main-row .marketing h3:nth-child(3) li {
+  color: #fb9c0c;
+}
+
+.wrapper .main-row .marketing h3:nth-child(5) {
+  color: #fb9c0c;
+}
+
+.wrapper .main-row .marketing h3:nth-child(5) li {
+  color: #fb9c0c;
+}
+
+.wrapper .main-row .marketing h3 li {
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 750px) {
+  .wrapper .main-row {
+    display: block;
+  }
+  .wrapper .main-row main {
+    margin: 0;
+    margin-bottom: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .main-row main .available-funds {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

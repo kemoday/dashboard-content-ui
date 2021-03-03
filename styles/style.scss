@@ -1,150 +1,136 @@
-// vars
+//vars
 $primaryColor: #fb9c0c;
-$primaryIconColor: #ffebcd;
 $secendaryColor: #f2f3f7;
-$secendaryIconColor: #d3d3d3;
-$secendaryTextColor: #b5b5b5;
-
-// mixins
-@mixin box() {
+//mixins
+@mixin cardBox {
+  border-radius: 1rem;
   padding: 1rem;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-/*************/
+/**************/
+
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
-  box-sizing: border-box;
-}
-body {
-  background: #e8eaee;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main {
-  margin: 2rem 3rem;
+.wrapper {
+  .cart-label {
+    color: gray;
+    font-weight: 800;
+    font-size: 14px;
+  }
+  margin: 2rem;
   .main-row {
     display: flex;
-    justify-content: space-between;
-    section {
-      flex: 1;
-      @include box();
-    }
-    .account {
-      margin-right: 2rem;
+    main {
+      background-color: reds;
+      display: flex;
+      margin-right: 3rem;
+      @include cardBox();
       flex: 4;
-      div {
+      .main-account {
         flex: 1;
-      }
-      .wrapper {
-        display: flex;
-        .right,
-        .left {
-          & > p {
-            color: $secendaryTextColor;
-            font-weight: 600;
-            margin: 1rem 0;
-          }
-          & > h3 {
-            color: $secendaryTextColor;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin: 1rem 0;
-          }
+        h2 {
+          margin: 1rem 0;
+          font-size: 1.5rem;
+        }
+        .acount-number {
+          @extend .cart-label;
+          font-size: 1.2rem;
+          display: block;
+          margin: 5rem 0s;
           span {
+            padding: 0 0.5rem;
             color: $primaryColor;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
           }
-          .btn-wappers {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2.5rem;
-            button {
-              &:first-child {
-                background-color: $primaryColor;
-                color: white;
-                &:hover {
-                  color: black;
-                }
-              }
-              font-weight: 600;
-              cursor: pointer;
-              padding: 1rem;
-              border-radius: 10px;
-              border: none;
-              display: block;
-              transition: background-color ease 0.5s 0s;
-              &:hover {
-                background-color: $secendaryIconColor;
-              }
+        }
+
+        .btn-wapper {
+          display: flex;
+          button {
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            padding: 1rem;
+            font-weight: 800;
+            background-color: $secendaryColor;
+            margin: 2rem 0;
+            transition-duration: 0.5s;
+            &:hover {
+              background-color: gray;
+              color: white;
             }
           }
-        }
-        .right {
-          & > p {
-            color: green;
-            text-align: right;
+          .btn-primary {
+            background-color: $primaryColor;
+            margin-right: 1rem;
+            color: white;
           }
-          h2 {
-            text-align: right;
-            font-size: 2.5rem;
-            font-family: Arial, Helvetica, sans-serif;
+          .btn-secendary {
           }
         }
-        .left {
+      }
+      .available-funds {
+        text-align: right;
+        h2 {
+          font-size: 3rem;
         }
       }
     }
     .marketing {
-      & > p {
-        color: $secendaryTextColor;
-        font-weight: 600;
-        margin: 1rem 0;
-      }
-      h1 {
-        font-size: 2rem;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+      flex: 1;
+      @include cardBox();
       h2 {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        &:nth-child(3) {
+          li {
+            color: $primaryColor;
+          }
+        }
+        &:nth-child(5) {
+          color: $primaryColor;
+          li {
+            color: $primaryColor;
+          }
+        }
         margin: 1rem 0;
-        span {
+        li {
           padding-right: 0.5rem;
         }
       }
     }
   }
-  .services-row {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: space-between;
-    .services-list {
-      @include box();
-      flex: 1;
-      margin-right: 2rem;
-      .service {
-        display: flex;
-        justify-items: center;
-        span {
-          padding: 1rem;
-          font-size: 3rem;
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    .main-row {
+      display: block;
+      main {
+        margin: 0;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        .main-account {
         }
-        section {
-          display: flex;
-          justify-items: center;
-          flex-direction: column;
-          p {
-            background-color: #ddd;
-          }
+        .available-funds {
+          order: -1;
+          text-align: left;
+          margin-bottom: 2rem;
         }
       }
-    }
-    .services-details {
-      @include box();
-      flex: 3;
     }
   }
 }

@@ -113,6 +113,48 @@ $secendaryColor: #f2f3f7;
       }
     }
   }
+  .services-row {
+    margin-top: 2rem;
+    display: flex;
+    .service {
+      @include cardBox();
+      margin-right: 2rem;
+      flex: 1;
+
+      .service-item {
+        &:nth-child(odd) {
+          li {
+            background-color: #ffebcc;
+            color: $primaryColor;
+          }
+        }
+        &:nth-child(even) {
+          li {
+            background-color: #d3d3d3;
+            color: black;
+          }
+        }
+        display: flex;
+        justify-items: center;
+        margin: 1rem 0;
+        li {
+          font-size: 2rem;
+          margin-right: 1.5rem;
+          border-radius: 8px;
+          background-color: #ffebcc;
+          color: $primaryColor;
+          padding: 1rem;
+          display: block;
+        }
+        .service-name {
+        }
+      }
+    }
+    .service-info {
+      @include cardBox();
+      flex: 3;
+    }
+  }
 }
 
 @media (max-width: 750px) {
@@ -121,15 +163,40 @@ $secendaryColor: #f2f3f7;
       display: block;
       main {
         margin: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         flex-direction: column;
         .main-account {
+          .btn-wapper {
+            display: flex;
+            flex-direction: column;
+            button {
+              flex: 1;
+              display: block;
+              margin: 1rem 0;
+            }
+          }
         }
         .available-funds {
           order: -1;
           text-align: left;
           margin-bottom: 2rem;
         }
+      }
+    }
+    .services-row {
+      display: block;
+      .service {
+        margin: 2rem 0;
+
+        .service-item {
+          .service-name {
+            flex: 1;
+          }
+        }
+      }
+      .service-info {
+        @include cardBox();
+        flex: 3;
       }
     }
   }

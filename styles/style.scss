@@ -120,7 +120,6 @@ $secendaryColor: #f2f3f7;
       @include cardBox();
       margin-right: 2rem;
       flex: 1;
-
       .service-item {
         &:nth-child(odd) {
           li {
@@ -197,12 +196,75 @@ $secendaryColor: #f2f3f7;
         }
       }
       .received-info {
-        @include cardBox();
+        display: flex;
         margin-top: 2rem;
+        justify-items: center;
+        .today-details {
+          margin-right: 2rem;
+          @include cardBox();
+          flex: 1;
+          .employee-wrapper {
+            justify-content: center;
+            display: flex;
+            padding: 1rem 2rem;
+            .employee-name {
+              margin-right: 2rem;
+              h2 {
+                margin: 1rem 0;
+                font-size: 1.5rem;
+              }
+            }
+            .employee-role {
+              margin-left: 2rem;
+              li {
+                color: $primaryColor;
+                padding: 1.5rem 0;
+                font-weight: 800;
+              }
+            }
+          }
+        }
+        .amazon {
+          @include cardBox();
+          div {
+            margin: 1rem auto;
+            width: 100px;
+            img {
+              margin: 1rem auto;
+              width: 100px;
+              height: 100px;
+            }
+          }
+          h2 {
+            font-size: 1.5rem;
+            text-align: center;
+          }
+        }
       }
     }
   }
 }
+
+/* 
+<div class="received-info">
+  <div class="today-details">
+    <p class="cart-label">6 Mar, 2021</p>
+    <div class="employee-name">
+      <h2>Jarvis Simmons</h2>
+      <p class="cart-label">6 Mar, 2021 at 3:20</p>
+      <h2>Alladin Diaz</h2>
+      <p class="cart-label">6 Mar, 2021 at 2:15</p>
+    </div>
+    <div class="employee-role">
+      <li>Marketing</li>
+      <li>Office Supplies</li>
+    </div>
+  </div>
+  <div class="amazon">
+    Amazon
+  </div>
+</div>
+*/
 
 @media (max-width: 750px) {
   .wrapper {
@@ -252,7 +314,29 @@ $secendaryColor: #f2f3f7;
           }
         }
         .received-info {
-          margin-top: 0rem;
+          display: block;
+          margin-top: 2rem;
+          .today-details {
+            margin-right: 0;
+          }
+          .amazon {
+            margin-top: 2rem;
+            @include cardBox();
+            div {
+              img {
+                margin: 1rem auto;
+                width: 100px;
+                height: 100px;
+              }
+            }
+            h2 {
+              font-size: 1.5rem;
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
         }
       }
     }
